@@ -7,7 +7,6 @@ G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\bin\Debug\Newtonsoft.Json.dll
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\bin\Debug\OTAPI.pdb
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\bin\Debug\TerrariaServer.pdb
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\bin\Debug\Newtonsoft.Json.xml
-G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\obj\Debug\JourneyMixer.csprojAssemblyReference.cache
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\obj\Debug\JourneyMixer.csproj.CoreCompileInputs.cache
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\obj\Debug\JourneyMixer.csproj.CopyComplete
 G:\Github\JourneyMixer\JourneyMixer\JourneyMixer\obj\Debug\JourneyMixer.dll

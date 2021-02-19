@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Terraria;
-using Terraria.GameContent.Bestiary;
 using TerrariaApi.Server;
 
 namespace JourneyMixer
@@ -12,7 +11,7 @@ namespace JourneyMixer
     [ApiVersion(2, 1)]
     public class JourneyMixer : TerrariaPlugin
     {
-        public override Version Version => new Version("1.0");
+        public override Version Version => new Version("1.1");
 
         public override string Name => "JourneyMixer";
 
@@ -44,11 +43,12 @@ namespace JourneyMixer
             if (args.MsgID == PacketTypes.PlayerInfo)
             {
                 var bitsbyte = (BitsByte)args.Msg.readBuffer[args.Length];
-                if (bitsbyte[3])
+
+                if ((Main.GameMode == 3 && !bitsbyte[3]) || (Main.GameMode != 3 && bitsbyte[3]))
                 {
-                    TShockAPI.TShock.Log.ConsoleInfo("Fixing journeymode for ix {0}", args.Msg.whoAmI);
-                    bitsbyte[3] = false;
+                    bitsbyte[3] = !bitsbyte[3];
                     args.Msg.readBuffer[args.Length] = bitsbyte;
+                    TShockAPI.TShock.Log.ConsoleInfo("[JM] {0} journeymode for index {1}.", bitsbyte[3] ? "Enabled" : "Disabled", args.Msg.whoAmI);
                 }
             }
         }
